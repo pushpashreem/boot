@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery.css">
+</head>
+<body>
+    <h1>hello</h1>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            function fadeSequence() {
+                $("#div1").fadeIn(1000).delay(1000).fadeOut(1000,
+                    function(){
+                        $("#div2").fadeIn(1000).delay(1000).fadeOut(1000,
+                    function(){
+                        $("#div3").fadeIn(1000).delay(1000).fadeOut(1000,
+                    function(){
+
+                    });
+                    });
+         });
+        }
+        fadeSequence();
+    });
+    </script>
+</body>
+</html>
